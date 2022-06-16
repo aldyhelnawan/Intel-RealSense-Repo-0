@@ -6,7 +6,7 @@ Credits to Intel RealSense Developer Team
 """
 
 """ Camera Resolution Configuration """
-input_res = input("What is the configuration of the camera? 640x480[480p]  1280x720[720p] ")
+input_res = input("What is the configuration of the camera? 640x480[480p] 1280x720[720p] ")
 if input_res == '480p':
     """ Camera Resolution 480p """
     hres = 640
