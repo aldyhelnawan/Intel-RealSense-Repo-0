@@ -22,3 +22,7 @@ The file that included in this repository:
 Note:
 For the .bag file, it is recommended that the camera configuration is matched with the .bag file configuration which it's created.
 And to change the camera configuration such as resolutions and fps, you need to do it on the realsense_d435i_config.py python file.
+
+
+
+Credits to [Intel RealSense Team](https://github.com/IntelRealSense/librealsense)
