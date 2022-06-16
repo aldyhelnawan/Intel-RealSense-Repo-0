@@ -1,7 +1,7 @@
 ## Intel_RealSense_D4xx_Camera_Python
 #### [UPDATE] | June 16th, 2022.
 
-This is the improvement of the previous program that with pyrealsense2 python library.
+This is the improvement of the previous program that with pyrealsense2 python library. The program is using the RGB, Depth, and Infrared Camera for Computer Vision Project.
 
 Tested it with Intel RealSense D435i Stereo Camera on Windows 10 with Pycharm on Anaconda Virtual Environment.
 
