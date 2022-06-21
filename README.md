@@ -1,16 +1,15 @@
 ## Intel_RealSense_D4xx_Camera_Python
-#### [UPDATE] | June 16th, 2022.
+#### [UPDATE] | June 21st, 2022.
 
-This is the improvement of the previous program that with pyrealsense2 python library. The program is using the RGB, Depth, and Infrared Camera for Computer Vision Project.
+This is the update of the previous code.
 
-Tested it with Intel RealSense D435i Stereo Camera on Windows 10 with Pycharm on Anaconda Virtual Environment.
+Tested with Intel RealSense D435i Stereo Camera on Windows 10 and Ubuntu 20.04 with Pycharm on Anaconda Virtual Environment.
 
-This update has a major changes, include in this list:
-  1. User interaction with the code. So, no need to configure so much to use it.
-  2. Adding a config file (realsense_d435i_config.py) for configuring the camera for other mode in .
-  3. All interaction already centralized to one python file (realsense_d435i_test.py).
-  4. Update of the stereo module (Depth & Infrared) FOV to be aligned with the RGB FOV.
-  5. Configurable to switch between 1280x720[720p] with 620x480[480p] resolutions.
+List of updates, some major changes, deletion, and modification.
+  1. Removed the 480p, 720p resolution option.
+  2. Removed some sections that doesn't functional.
+  3. Added the optional resolution input (recomended up to 1280x720 pixels for better image quality).
+  4. Added optional resolution for .bag playback selection (and .bag video save in .avi format).
 
 The file that included in this repository:
   1. realsense_d435i_test.py
@@ -22,7 +21,5 @@ The file that included in this repository:
 Note:
 For the .bag file, it is recommended that the camera configuration is matched with the .bag file configuration which it's created.
 And to change the camera configuration such as resolutions and fps, you need to do it on the realsense_d435i_config.py python file.
-
-
 
 Credits to [Intel RealSense Team](https://github.com/IntelRealSense/librealsense)
