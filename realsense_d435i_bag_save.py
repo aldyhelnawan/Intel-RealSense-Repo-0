@@ -8,7 +8,8 @@ Credits to Intel RealSense Developer Team for providing the tutorial & guides
 import pyrealsense2 as rs
 import numpy as np
 import cv2
-from realsense_d435i_config import hres, vres, fps, ir_1, ir_2, fill_stereo_camera, color_mode, hole_fill_config
+from realsense_d435i_config import hres, vres, fps, ir_1, ir_2, fill_stereo_camera, \
+    color_mode, hole_fill_config, hres_custom, vres_custom
 
 """ Insert the RealSense .bag File """
 file = input("Please insert the .bag file name here: ")
@@ -16,14 +17,14 @@ file = input("Please insert the .bag file name here: ")
 """ Saved Video Resolution Configuration """
 # (Recommended to Use the same config as the bag file or the time you record the bag file)
 # Or if you wana change it to a lower resolution / settings, there's no problem with it.
-svhres = hres
-svvres = vres
+svhres = hres_custom
+svvres = vres_custom
 svfps = fps
-svhtres = 3840
+svhtres = int(svhres*3)
 
 """ Configuration of Save Video """
 # The default use 20 FPS, so we can put 30 FPS as a "normal" speed reference
-# If we put 60 FPS, the video will speedup 1.5x up to 2.0x
+# If we put 60 FPS, the video will speedup 1.5x up to 2.0x since the origin fps is 30
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out_rgb = cv2.VideoWriter('video_rgb.avi', fourcc, svfps, (svhres,svvres))
 out_depth = cv2.VideoWriter('video_depth.avi', fourcc, svfps, (svhres,svvres))
